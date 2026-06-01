@@ -41,6 +41,7 @@ To ensure maximum availability and activate the automatic recovery engine, deplo
 
 Create the service definition file /etc/systemd/system/meshtastic-ble.service:
 
+Ini, TOML
 [Unit]
 Description=Meshtastic BLE-TCP Advanced Bridge
 After=bluetooth.target network.target
