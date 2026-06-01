@@ -1,0 +1,8 @@
+{
+  "ble_mac_address": "DE:AD:C0:DE:CA:FE",
+  "port_clients": 4403,
+  "port_proxy": 4404,
+  "telemetry_interval_sec": 1800,
+  "debug": false
+}
+
