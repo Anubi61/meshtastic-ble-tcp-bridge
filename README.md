@@ -39,9 +39,9 @@ The downstream traffic targeted for the wider mesh network is seamlessly handled
 ## Production Deployment via Systemd
 To ensure maximum availability and activate the automatic recovery engine, deploy the bridge as a native background service.
 
-Create the service definition file /etc/systemd/system/meshtastic-ble.service:
+1. Create the service definition file `/etc/systemd/system/meshtastic-ble.service`:
 
-Ini, TOML
+```ini
 [Unit]
 Description=Meshtastic BLE-TCP Advanced Bridge
 After=bluetooth.target network.target
@@ -57,12 +57,16 @@ RestartSec=2
 [Install]
 WantedBy=multi-user.target
 
-Reload systemd definitions, enable the service to launch at boot, and fire up the engine:
+```
 
+2. Reload systemd definitions, enable the service to launch at boot, and fire up the engine:
 
+```
 systemctl daemon-reload
 systemctl enable meshtastic-ble.service
 systemctl start meshtastic-ble.service
+
+```
 
 Monitor real-time logs and watchdog event executions:
 
